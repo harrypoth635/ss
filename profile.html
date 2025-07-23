@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Webpage - Profile</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e0e7eb; /* Light gray-blue background */
+            color: #334155; /* Dark text color */
+            margin: 0;
+            padding: 1rem;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Responsive padding for body */
+        @media (min-width: 640px) {
+            body { padding: 2rem; }
+        }
+        @media (min-width: 768px) {
+            body { padding: 3rem; }
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 12px; /* Rounded corners */
+            padding: 2rem;
+            flex-grow: 1;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #cbd5e1;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #4f46e5;
+            margin-bottom: 0.5rem;
+            border-radius: 8px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #64748b;
+            border-radius: 8px;
+        }
+
+        /* Navigation Styling */
+        nav {
+            background-color: #6366f1;
+            padding: 0.8rem 0;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+            border-radius: 8px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            display: block;
+            transition: background-color 0.3s ease;
+            border-radius: 6px;
+        }
+
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background-color: #4f46e5;
+            border-radius: 6px;
+        }
+
+        /* Profile Header Section */
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+            text-align: center;
+            background-color: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Circular image */
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 4px solid #6366f1; /* Border around image */
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header h2 {
+            font-size: 2.2rem;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            border-radius: 8px;
+        }
+
+        .profile-header p {
+            font-size: 1.1rem;
+            color: #475569;
+            border-radius: 8px;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #f8fafc;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        section h3 {
+            font-size: 1.8rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            border-radius: 8px;
+        }
+
+        section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        section ul li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            border-radius: 8px;
+        }
+
+        section ul li::before {
+            content: '•'; /* Bullet point */
+            color: #6366f1;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1.5em;
+            position: absolute;
+            left: 0;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background-color: #f0f4f8; /* Slightly darker background for items */
+            border-left: 4px solid #6366f1;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .experience-item h4, .education-item h4 {
+            font-size: 1.3rem;
+            color: #334155;
+            margin-bottom: 0.3rem;
+            border-radius: 8px;
+        }
+
+        .experience-item p, .education-item p {
+            font-size: 0.95rem;
+            color: #475569;
+            margin-bottom: 0.2rem;
+            border-radius: 8px;
+        }
+
+        .experience-item ul, .education-item ul {
+            list-style: disc;
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .experience-item ul li, .education-item ul li {
+            margin-bottom: 0.4rem;
+            padding-left: 0; /* Override previous bullet styling */
+            position: static;
+            border-radius: 8px;
+        }
+
+        .experience-item ul li::before, .education-item ul li::before {
+            content: none; /* Remove custom bullet */
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #cbd5e1;
+            color: #475569;
+            border-radius: 12px;
+            font-size: 0.9rem;
+        }
+
+        /* Ensure all elements have rounded corners */
+        div, section, h1, h2, h3, h4, p, ul, li, a, header, nav, footer, img {
+            border-radius: 0.5rem; /* A general default for many elements */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Profile</h1>
+            <p>A snapshot of my professional journey and skills.</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="autobiography.html">Autobiography</a></li>
+            </ul>
+        </nav>
+
+        <div class="profile-header">
+            <img src="https://placehold.co/150x150/a78bfa/ffffff?text=Profile" alt="Profile Picture" class="profile-pic">
+            <h2>[Your Name]</h2>
+            <p>[Your Professional Title/Role]</p>
+            <p>[Your Short Bio/Tagline]</p>
+        </div>
+
+        <section>
+            <h3>About Me</h3>
+            <p>
+                [Write a brief summary about yourself, your professional philosophy, and what you aim to achieve. E.g., "A passionate software engineer with 5+ years of experience in developing scalable web applications. I thrive on solving complex problems and building user-centric solutions. Always eager to learn new technologies and contribute to impactful projects."]
+            </p>
+        </section>
+
+        <section>
+            <h3>Skills</h3>
+            <ul>
+                <li><strong>Programming Languages:</strong> [e.g., Python, JavaScript, Java, C++]</li>
+                <li><strong>Web Technologies:</strong> [e.g., HTML, CSS, React, Node.js, Django]</li>
+                <li><strong>Databases:</strong> [e.g., SQL, NoSQL, MongoDB, PostgreSQL]</li>
+                <li><strong>Tools & Platforms:</strong> [e.g., Git, Docker, AWS, Azure, Figma]</li>
+                <li><strong>Soft Skills:</strong> [e.g., Problem-solving, Teamwork, Communication, Leadership]</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Experience</h3>
+            <div class="experience-item">
+                <h4>[Job Title] at [Company Name]</h4>
+                <p>[Start Date] – [End Date] (or Present)</p>
+                <ul>
+                    <li>[Key responsibility/achievement 1]</li>
+                    <li>[Key responsibility/achievement 2]</li>
+                    <li>[Key responsibility/achievement 3]</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h4>[Previous Job Title] at [Previous Company Name]</h4>
+                <p>[Start Date] – [End Date]</p>
+                <ul>
+                    <li>[Key responsibility/achievement 1]</li>
+                    <li>[Key responsibility/achievement 2]</li>
+                </ul>
+            </div>
+            <!-- Add more experience items as needed -->
+        </section>
+
+        <section>
+            <h3>Education</h3>
+            <div class="education-item">
+                <h4>[Degree Name] in [Major]</h4>
+                <p>[University Name], [City, Country]</p>
+                <p>[Graduation Year]</p>
+            </div>
+            <div class="education-item">
+                <h4>[Previous Degree/Certification]</h4>
+                <p>[Institution Name], [City, Country]</p>
+                <p>[Completion Year]</p>
+            </div>
+            <!-- Add more education items as needed -->
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+    </footer>
+</body>
+</html>

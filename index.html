@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Webpage - Home</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e0e7eb; /* Light gray-blue background */
+            color: #334155; /* Dark text color */
+            margin: 0;
+            padding: 1rem;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures footer stays at bottom */
+        }
+
+        /* Responsive padding for body */
+        @media (min-width: 640px) {
+            body { padding: 2rem; }
+        }
+        @media (min-width: 768px) {
+            body { padding: 3rem; }
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 12px; /* Rounded corners */
+            padding: 2rem;
+            flex-grow: 1; /* Allows container to expand */
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #cbd5e1; /* Light gray border */
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #4f46e5; /* Indigo color */
+            margin-bottom: 0.5rem;
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #64748b; /* Slate gray */
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        /* Navigation Styling */
+        nav {
+            background-color: #6366f1; /* Stronger indigo */
+            padding: 0.8rem 0;
+            border-radius: 8px; /* Rounded corners */
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            display: block;
+            transition: background-color 0.3s ease;
+            border-radius: 6px; /* Slightly smaller rounded corners for links */
+        }
+
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background-color: #4f46e5; /* Darker indigo on hover */
+            border-radius: 6px;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #f8fafc; /* Very light blue-gray */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: #1e293b; /* Darker slate */
+            margin-bottom: 1rem;
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        section p {
+            margin-bottom: 1rem;
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #cbd5e1; /* Light gray */
+            color: #475569; /* Medium slate gray */
+            border-radius: 12px; /* Rounded corners */
+            font-size: 0.9rem;
+        }
+
+        /* Ensure all elements have rounded corners */
+        div, section, h1, h2, p, ul, li, a, header, nav, footer {
+            border-radius: 0.5rem; /* A general default for many elements */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to My Personal Webpage</h1>
+            <p>Your hub for all things about [Your Name]</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="autobiography.html">Autobiography</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <h2>Hello There!</h2>
+            <p>
+                Welcome to my corner of the internet. Here, you'll find information about my professional journey, personal interests, and the story of my life. I'm excited to share a glimpse into who I am and what drives me.
+            </p>
+            <p>
+                Feel free to explore the different sections using the navigation above. Whether you're interested in my skills, my background, or just want to read my life story, you're in the right place!
+            </p>
+        </section>
+
+        <section>
+            <h2>What You'll Find Here</h2>
+            <ul>
+                <li><strong>Profile:</strong> Learn about my professional skills, experience, and education.</li>
+                <li><strong>Autobiography:</strong> Dive deeper into my personal journey and life experiences.</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+    </footer>
+</body>
+</html>

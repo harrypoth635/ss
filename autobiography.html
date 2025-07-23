@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Webpage - Autobiography</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e0e7eb; /* Light gray-blue background */
+            color: #334155; /* Dark text color */
+            margin: 0;
+            padding: 1rem;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Responsive padding for body */
+        @media (min-width: 640px) {
+            body { padding: 2rem; }
+        }
+        @media (min-width: 768px) {
+            body { padding: 3rem; }
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 12px; /* Rounded corners */
+            padding: 2rem;
+            flex-grow: 1;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #cbd5e1;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #4f46e5;
+            margin-bottom: 0.5rem;
+            border-radius: 8px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #64748b;
+            border-radius: 8px;
+        }
+
+        /* Navigation Styling */
+        nav {
+            background-color: #6366f1;
+            padding: 0.8rem 0;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+            border-radius: 8px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            display: block;
+            transition: background-color 0.3s ease;
+            border-radius: 6px;
+        }
+
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background-color: #4f46e5;
+            border-radius: 6px;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #f8fafc;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        section p {
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        /* Specific section background and text colors */
+        .intro-section {
+            background-color: #eff6ff; /* Light blue */
+        }
+        .intro-section h2 {
+            color: #1e40af; /* Dark blue */
+        }
+
+        .early-life-section {
+            background-color: #ecfdf5; /* Light green */
+        }
+        .early-life-section h2 {
+            color: #065f46; /* Dark green */
+        }
+
+        .education-career-section {
+            background-color: #fffbeb; /* Light yellow */
+        }
+        .education-career-section h2 {
+            color: #92400e; /* Dark yellow/orange */
+        }
+
+        .personal-life-section {
+            background-color: #f5f3ff; /* Light purple */
+        }
+        .personal-life-section h2 {
+            color: #5b21b6; /* Dark purple */
+        }
+
+        .future-aspirations-section {
+            background-color: #fef2f2; /* Light red */
+        }
+        .future-aspirations-section h2 {
+            color: #991b1b; /* Dark red */
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #cbd5e1;
+            color: #475569;
+            border-radius: 12px;
+            font-size: 0.9rem;
+        }
+
+        /* Ensure all elements have rounded corners */
+        div, section, h1, h2, p, ul, li, a, header, nav, footer {
+            border-radius: 0.5rem; /* A general default for many elements */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Life's Journey</h1>
+            <p>A personal reflection</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="autobiography.html">Autobiography</a></li>
+            </ul>
+        </nav>
+
+        <!-- Introduction Section -->
+        <section class="intro-section">
+            <h2>Introduction</h2>
+            <p>
+                Welcome to my autobiography. This document is a reflection on the significant moments, challenges, and triumphs that have shaped who I am today. From my earliest memories to my current endeavors, I hope to share a glimpse into the experiences that have defined my path.
+            </p>
+        </section>
+
+        <!-- Early Life Section -->
+        <section class="early-life-section">
+            <h2>Early Life and Childhood</h2>
+            <p>
+                I was born in [Your Birthplace] on [Your Birth Date]. My childhood was characterized by [describe key aspects, e.g., a bustling family, quiet rural life, early interests]. I remember spending countless hours [mention a favorite childhood activity or hobby]. These early years instilled in me [mention values or lessons learned].
+            </p>
+            <p>
+                My education began at [Primary School Name], where I first discovered my passion for [subject or activity]. The foundational experiences from this period laid the groundwork for my future aspirations.
+            </p>
+        </section>
+
+        <!-- Education and Career Section -->
+        <section class="education-career-section">
+            <h2>Education and Professional Journey</h2>
+            <p>
+                After [Primary/Secondary Education], I pursued higher education at [University/College Name], specializing in [Your Major/Field of Study]. This period was crucial for my intellectual growth and allowed me to explore [specific areas of interest].
+            </p>
+            <p>
+                My professional career commenced at [First Job/Company Name], where I gained valuable experience in [your role/industry]. Over the years, I have had the opportunity to work on [mention key projects or achievements] and contribute to [mention impact]. Each role has taught me the importance of [key professional lesson].
+            </p>
+            <p>
+                Currently, I am [Your Current Role/Activity], focusing on [current projects or goals].
+            </p>
+        </section>
+
+        <!-- Personal Life and Interests Section -->
+        <section class="personal-life-section">
+            <h2>Personal Life and Interests</h2>
+            <p>
+                Beyond my professional life, I find immense joy and fulfillment in my personal pursuits. My interests include [list hobbies, e.g., reading, hiking, painting, cooking]. These activities provide balance and allow me to [explain benefit, e.g., relax, express creativity, stay active].
+            </p>
+            <p>
+                I also cherish time spent with [mention family, friends, or community]. The relationships in my life are a constant source of inspiration and support.
+            </p>
+        </section>
+
+        <!-- Future Aspirations Section -->
+        <section class="future-aspirations-section">
+            <h2>Future Aspirations</h2>
+            <p>
+                Looking ahead, I am excited about [mention future goals, e.g., learning new skills, contributing to a cause, traveling]. I believe in continuous growth and am always seeking new opportunities to expand my horizons.
+            </p>
+        </section>
+
+        <!-- Conclusion Section -->
+        <footer>
+            <h2>Conclusion</h2>
+            <p>
+                This autobiography is a living document, evolving as I continue to experience life. Thank you for taking the time to read about my journey.
+            </p>
+            <p class="copyright">&copy; 2025 [Your Name]. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
